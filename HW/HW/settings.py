@@ -91,10 +91,10 @@ DATABASES = {
     },
     'mongodb': {
         'ENGINE': 'django',
-        'NAME': 'hw',
+        'NAME': env('MONGO_DB_NAME'),
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb://localhost:27017/',
+            'host': env('MONGO_HOST'),
         }
     }
 }
